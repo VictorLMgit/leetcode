@@ -65,8 +65,20 @@ class Algoritmos{
         return [$max, $index];
     }
 
+    public function prefixSum(array $array) : array
+    {
+        $prefixSumArray = [];
+        $sum = 0;
+        for ($i=0; $i < count($array); $i++) { 
+            $sum += $array[$i];
+            $prefixSumArray[] = $sum;
+        }
+
+        return $prefixSumArray;
+    }
+
 }
 
 $a = new Algoritmos();
 $arr = [5,2,3,19,8, 1];
-print_r($a->insertionSort($arr));
+print_r($a->prefixSum($arr));
