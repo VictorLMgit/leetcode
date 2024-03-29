@@ -4,9 +4,8 @@
  * @return {number}
  */
 var myPow = function(x, n) {
-    const result = recursivePow(x,Math.abs(n));
-    if (n < 0) return 1/result;
-    return result;
+ 
+    return  n > 0 ? recursivePow(x,Math.abs(n)) : 1/recursivePow(x,Math.abs(n));
 
 };
 
@@ -19,4 +18,4 @@ var recursivePow = function(x, n){
 
 
 
-console.log(myPow(2,1));
+console.log(myPow(2,12));
