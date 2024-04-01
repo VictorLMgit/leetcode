@@ -3,18 +3,14 @@
  * @return {number}
  */
 var singleNumber = function(nums) {
-    let mapNumbers = {}
-    for (let i = 0; i < nums.length; i++) {
-        const element = nums[i];
-        if (mapNumbers[element]) {
-            mapNumbers[element]= false;
-            continue;
-        }
-        mapNumbers[element] = true;
+    xor = 0;
+    for (const num of nums) {
+        console.log(`${xor} ^ ${num} = `);
+        xor = xor ^ num;
+        console.log(`${xor} `);
+
     }
-    for (const key in mapNumbers) {
-       if(mapNumbers[key]) return key;
-    }
+    return xor
 };
 
 const nums = [4,1,2,1,2];
