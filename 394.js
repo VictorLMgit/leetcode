@@ -13,12 +13,12 @@ var decodeString = function (s) {
         }
         let num = '';
         cur = stack.pop();
-        while (!Number.isNaN(Number(cur))) {
+        while (!isNaN(cur)) {
             num = cur + num;
             cur = stack.pop();
         }
         stack.push(cur);
-        stack.push(str.repeat(Number(num)));
+        stack.push(str.repeat(num));
     }
     return stack.join('');
 };
