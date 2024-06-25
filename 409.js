@@ -7,7 +7,7 @@ var longestPalindrome = function (s) {
     let map = new Map();
     for (let i = 0; i < s.length; i++) map.set(s[i], map.get(s[i]) + 1 || 1);
     let longest = 0;
-   
+   [2,3,4].length()
     map.forEach((val)=>{
         longest += (val % 2 == 0) ? val : val - 1;
     })
